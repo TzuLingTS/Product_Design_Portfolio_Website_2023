@@ -1,0 +1,340 @@
+/* Work- Case Study */
+/* #film,
+#case_study {
+  background-image: url(../img/bg/noise.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+.work_container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.case_study_content {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 4rem;
+  animation: fadeIn 3s;
+}
+
+.film_content {
+  animation: fadeIn 3s;
+}
+
+.project_container {
+  display: flex;
+  flex-direction: row;
+  row-gap: 0;
+  width: 70%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.project_container .project_img {
+  background: linear-gradient(
+    270deg,
+    rgba(143, 145, 145, 0.4) 0%,
+    rgba(167, 168, 168, 0.2) 21.21%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-color: #fff;
+  width: 50%;
+  height: 40rem;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.project_container .project_intro {
+  background: linear-gradient(
+    90deg,
+    rgba(143, 145, 145, 0.4) 0%,
+    rgba(167, 168, 168, 0.2) 21.21%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-color: #fff;
+  width: 50%;
+  height: 40rem;
+  vertical-align: middle;
+}
+
+.project_container img {
+  /* padding: 2rem;
+  max-width: 28rem;
+  margin: 0 auto; */
+  display: block;
+  width: 80%;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+/* Ｐroject Intro Style */
+.project_intro {
+  padding: 3.2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pro_in_1,
+.pro_in_2 {
+  text-align: center;
+}
+
+.pro_in_1 h6 {
+  margin: 0 0 1rem 0;
+}
+
+.pro_in_1 p {
+  border-top: 1px solid #616161;
+  border-bottom: 1px solid #616161;
+  padding: 0.25rem 0;
+}
+
+.pro_in_2 {
+  color: #313131;
+}
+
+.pro_in_2 h5,
+.pro_in_2 p {
+  margin: 0.5rem;
+}
+
+.pro_in_4 button {
+  width: 100%;
+}
+
+/* Film Page Style */
+.container {
+  list-style: none;
+  column-gap: 0;
+  padding: 0;
+  column-count: 3;
+  width: 94%;
+  margin: auto;
+}
+
+.card {
+  width: 100%;
+  padding: 0;
+  margin: auto;
+  box-sizing: border-box;
+  break-inside: avoid;
+}
+
+.container li {
+  display: flex;
+}
+
+.container li img {
+  padding-bottom: 2rem;
+}
+
+.A,
+.B {
+  max-width: 480px;
+  height: fit-content;
+}
+
+.C,
+.D {
+  max-width: 380px;
+  height: fit-content;
+}
+
+.section_break {
+  margin-bottom: 2rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* RWD */
+@media (max-width: 1301px) {
+  .project_container {
+    width: 80%;
+  }
+
+  .container {
+    column-count: 2;
+  }
+  .A,
+  .B,
+  .C,
+  .D {
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 1136px) {
+  .project_container {
+    width: 88%;
+  }
+}
+
+@media (max-width: 1079px) {
+  .A,
+  .B,
+  .C,
+  .D {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .project_container {
+    flex-direction: column-reverse;
+    width: 70%;
+  }
+  /* width50改掉、照片換成橫幅、陰影方向改變 */
+  .project_container .project_img {
+    background: linear-gradient(
+      180deg,
+      rgba(143, 145, 145, 0.4) 0%,
+      rgba(167, 168, 168, 0.2) 21.21%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-color: #fff;
+    width: 100%;
+    /* height: 32rem; */
+    height: fit-content;
+  }
+
+  .project1 .project_img img {
+    content: url("../img/work/case_study/project1_hor.png");
+  }
+  .project2 .project_img img {
+    content: url("../img/work/case_study/project2_hor.png");
+  }
+  .project3 .project_img img {
+    content: url("../img/work/case_study/project3_hor.png");
+  }
+
+  .project_container .project_intro {
+    background: linear-gradient(
+      0deg,
+      rgba(143, 145, 145, 0.4) 0%,
+      rgba(167, 168, 168, 0.2) 21.21%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-color: #fff;
+    width: 100%;
+    /* height: 32rem; */
+    height: fit-content;
+  }
+  .project_intro {
+    padding: 4rem;
+  }
+
+  .A,
+  .B,
+  .C,
+  .D {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 868px) {
+  .project_container {
+    flex-direction: column-reverse;
+    width: 80%;
+  }
+  .project_container .project_intro,
+  .project_container .project_img {
+    /* height: 36rem; */
+    height: fit-content;
+  }
+  .A,
+  .B,
+  .C,
+  .D {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project_container {
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+  /* .project_container .project_intro,
+  .project_container .project_img {
+    height: 32rem;
+  } */
+  .container {
+    column-count: 1;
+  }
+  .A,
+  .B,
+  .C,
+  .D {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 596px) {
+  .project_container {
+    flex-direction: column-reverse;
+    width: 94%;
+  }
+  .project_container .project_intro,
+  .project_container .project_img {
+    /* height: 40rem; */
+    height: fit-content;
+  }
+
+  .project1 .project_img img {
+    content: url("../img/work/case_study/project1.png");
+  }
+  .project2 .project_img img {
+    content: url("../img/work/case_study/project2.png");
+  }
+  .project3 .project_img img {
+    content: url("../img/work/case_study/project3.png");
+  }
+}
+
+@media (max-width: 532px) {
+  .project_container {
+    flex-direction: column-reverse;
+    width: 94%;
+  }
+  .project_container .project_intro,
+  .project_container .project_img {
+    height: fit-content;
+  }
+  .project_intro {
+    padding: 2rem;
+  }
+}
+/* @media (max-width: 1440px) {
+  .project_container .project_img,
+  .project_container .project_intro {
+    height: 50rem;
+  }
+
+  .project_container {
+    width: 90%;
+  }
+
+  .project_container img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .project_container .project_img,
+  .project_container .project_intro {
+    height: 40rem;
+  }
+} */
